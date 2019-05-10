@@ -38,11 +38,10 @@ namespace StringIO_TextView
             this.OrgStr = this.lblResult.Text; // "결과 : " 문자열 저장
         }
 
-        private void btnEcit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(TextCheck())
+            if (TextCheck())
                 this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
-            
         }
 
         private void txtEdit_KeyPress(object sender, KeyPressEventArgs e)
@@ -53,5 +52,7 @@ namespace StringIO_TextView
                 if(TextCheck()) this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
             }
         }
+
+        
     }
 }

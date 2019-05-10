@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtEdit = new System.Windows.Forms.TextBox();
-            this.btnEcit = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -41,16 +41,16 @@
             this.txtEdit.TabIndex = 0;
             this.txtEdit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdit_KeyPress);
             // 
-            // btnEcit
+            // btnEdit
             // 
-            this.btnEcit.Font = new System.Drawing.Font("Tahoma", 36F);
-            this.btnEcit.Location = new System.Drawing.Point(13, 41);
-            this.btnEcit.Name = "btnEcit";
-            this.btnEcit.Size = new System.Drawing.Size(268, 66);
-            this.btnEcit.TabIndex = 1;
-            this.btnEcit.Text = "입력";
-            this.btnEcit.UseVisualStyleBackColor = true;
-            this.btnEcit.Click += new System.EventHandler(this.btnEcit_Click);
+            this.btnEdit.Font = new System.Drawing.Font("Tahoma", 36F);
+            this.btnEdit.Location = new System.Drawing.Point(13, 41);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(268, 66);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "입력";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblResult
             // 
@@ -68,7 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 183);
             this.Controls.Add(this.lblResult);
-            this.Controls.Add(this.btnEcit);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -83,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtEdit;
-        private System.Windows.Forms.Button btnEcit;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblResult;
     }
 }
