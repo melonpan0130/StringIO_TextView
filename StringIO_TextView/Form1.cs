@@ -11,7 +11,22 @@ namespace StringIO_TextView
 {
     public partial class Form1 : Form
     {
-        String OrgStr = ""; 
+        String OrgStr = "";
+
+        private bool TextCheck()
+        {
+            if (this.txtEdit.Text != "")
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("텍스트를 입력하세요!", "알림",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.txtEdit.Focus(); // 커서를 이동시킴
+                return false;
+            }
+        }
 
         public Form1()
         {
@@ -30,9 +45,12 @@ namespace StringIO_TextView
 
         private void btnEcit_Click(object sender, EventArgs e)
         {
-            if (this.lblResult.Text == "")
-                this.lblResult.Text = "please insert comment.";
-            this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
+            if(TextCheck())
+                this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
+            
         }
+
+        
+
     }
 }
