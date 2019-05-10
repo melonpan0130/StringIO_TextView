@@ -33,11 +33,6 @@ namespace StringIO_TextView
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.OrgStr = this.lblResult.Text; // "결과 : " 문자열 저장
@@ -50,7 +45,12 @@ namespace StringIO_TextView
             
         }
 
-        
-
+        private void txtEdit_KeyPress(object sender, KeyPressEventArgs e)
+        { // object sender, 이벤트를 발생한 대상, KeyPressEventArgs e 입력된 값 검사
+            if (e.KeyChar == (char)13)
+            {
+                if(TextCheck()) this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
+            }
+        }
     }
 }
