@@ -49,6 +49,7 @@ namespace StringIO_TextView
         { // object sender, 이벤트를 발생한 대상, KeyPressEventArgs e 입력된 값 검사
             if (e.KeyChar == (char)13)
             {
+                e.Handled = true;
                 if(TextCheck()) this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
             }
         }
